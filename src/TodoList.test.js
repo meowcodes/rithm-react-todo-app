@@ -21,22 +21,23 @@ it("matches snapshot", function () {
 it("adds todo items", function() {
     wrapper.setState({
         todoArr: [{
-            text: "need to test"
+            text: "need to test",
+            id: 1
         }]
     });
 
     expect(wrapper.state().todoArr).toEqual(
-        [{ text: "need to test"}]
+        [{ text: "need to test", id: 1}]
     );
     
     wrapper.instance().createTodo({
-        text: "need to test maore"
+        text: "need to test more"
     });
 
     expect(wrapper.state().todoArr).toEqual(
         [
-            { text: "need to test"},
-            { text: "need to test more"}
+            { text: "need to test", id: 1},
+            { text: "need to test more", id: expect.any(String)}
         ]
     );
 });
@@ -52,6 +53,8 @@ it("renders a form and successfully creates a todo", function() {
     expect(wrapper.state().todoArr.length).toEqual(1);
 
     expect(
-        wrapper.find("li").last().text()
+        wrapper.find("p").last().text()
     ).toEqual("need to test")
-})
+});
+
+// deletes when delete btn clicked
