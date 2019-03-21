@@ -4,10 +4,10 @@ class Todo extends Component {
 
     render() {
         return (
-            <div>
+            <li>
                 <p>{ this.props.text }</p>
                 <button onClick={this.props.notifyDelete}>X</button>
-            </div>)
+            </li>)
     }
 }
 

@@ -4,13 +4,13 @@ exports[`matches snapshot 1`] = `
 <Todo
   text="need to test"
 >
-  <div>
+  <li>
     <p>
       need to test
     </p>
     <button>
       X
     </button>
-  </div>
+  </li>
 </Todo>
 `;
