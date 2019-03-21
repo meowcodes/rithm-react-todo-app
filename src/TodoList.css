@@ -1,0 +1,11 @@
+.TodoList-form {
+    width: 100vw;
+}
+.TodoList-list {
+    display: inline-block;
+    width: 60vw;
+}
+.TodoList-edit {
+    display: inline-block;
+    width: 40vw;
+}

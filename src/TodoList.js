@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import Todo from './Todo';
 import NewTodoForm from './NewTodoForm';
+import EditForm from './EditForm'
 import uuid from 'uuid/v4';
+import './TodoList.css';
 
 
 class TodoList extends Component {
@@ -33,17 +35,22 @@ class TodoList extends Component {
 
     render() {
         return (
-            <div>
-                <NewTodoForm notifySubmit={ this.createTodo }/>
-                <ul>
-                    {this.state.todoArr.map( todo => (
-                        <Todo 
-                            text={ todo.text }
-                            key={ todo.id }
-                            notifyDelete={ () => this.deleteTodo(todo.id) }
-                        />
-                    ))}
-                </ul>
+            <div className="TodoList">
+                <div className="TodoList-form">
+                    <NewTodoForm notifySubmit={ this.createTodo }/>
+                </div>
+                <div className="TodoList-list">
+                    <ul>
+                        {this.state.todoArr.map( todo => (
+                            <Todo 
+                                text={ todo.text }
+                                key={ todo.id }
+                                notifyDelete={ () => this.deleteTodo(todo.id) }
+                            />
+                        ))}
+                    </ul>
+                </div>
+                { this.state.edit && <div className="TodoList-edit"><EditForm /></div> }
             </div>
         )
     }
