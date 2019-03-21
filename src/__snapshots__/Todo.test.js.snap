@@ -1,3 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`matches snapshot 1`] = `undefined`;
+exports[`matches snapshot 1`] = `
+<Todo
+  text="need to test"
+>
+  <div>
+    <p>
+      need to test
+    </p>
+    <button>
+      X
+    </button>
+  </div>
+</Todo>
+`;
