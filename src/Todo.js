@@ -7,6 +7,7 @@ class Todo extends Component {
             <li>
                 <p>{ this.props.text }</p>
                 <button onClick={ this.props.notifyDelete }>X</button>
+                <button onClick={ this.props.notifyDelete }>X</button>
             </li>)
     }
 }

@@ -11,7 +11,8 @@ class TodoList extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            todoArr: []
+            todoArr: [],
+            edit: false
         }
 
         this.createTodo = this.createTodo.bind(this)
